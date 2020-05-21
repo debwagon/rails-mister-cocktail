@@ -1,7 +1,7 @@
 <img src="https://source.unsplash.com/featured/?ingredient">
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
   <%= f.association :ingredient, as: :radio_buttons  %>
+  <%= f.input :description, hint: "describe how much of the ingredient is needed" %>
   <!-- f.input :ingredients, collection: Ingredient.all -->
   <%= f.submit %>
 <% end %>
