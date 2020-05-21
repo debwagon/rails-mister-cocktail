@@ -1,0 +1,10 @@
+<img src="https://source.unsplash.com/featured/?ingredient">
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, as: :radio_buttons  %>
+  <!-- f.input :ingredients, collection: Ingredient.all -->
+  <%= f.submit %>
+<% end %>
+<br>
+
+<%= link_to "Cancel", cocktail_path(@cocktail) %>

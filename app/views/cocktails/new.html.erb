@@ -1,7 +1,8 @@
+<img src="https://source.unsplash.com/featured/?cocktail">
 <%= simple_form_for(@cocktail) do |f| %>
   <%= f.input :name %>
-  <%= f.association :doses %>
-  <%= f.association :ingredients, as: :check_boxes  %>
+ <!--  <%= f.association :doses %>
+  <%= f.association :ingredients, as: :check_boxes  %> -->
   <!-- f.input :ingredients, collection: Ingredient.all -->
   <%= f.submit %>
 <% end %>

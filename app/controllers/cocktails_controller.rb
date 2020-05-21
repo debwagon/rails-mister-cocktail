@@ -16,4 +16,9 @@ class CocktailsController < ApplicationController
     @cocktail.save
     redirect_to cocktail_path(@cocktail)
   end
+
+  # def doses
+  #   @cocktail = Cocktail.find(params[:id])
+  #   @doses = @cocktail.doses
+  # end
 end
