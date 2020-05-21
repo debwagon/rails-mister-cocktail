@@ -1,4 +1,5 @@
 <h1>Mixology Magic</h1>
+
 <br>
 <div class="cards">
   <% @cocktails.each_with_index do |cocktail, i| %>
@@ -7,16 +8,18 @@
         <img src=<%="https://source.unsplash.com/featured/?cocktail?sig+123#{i}"%>>
       </div>
       <div class="row">
-        <div class="col">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+
+        <!-- <div class="col">
           <strong><%= cocktail.name %></strong>
         </div>
         <div class="col">
           <%= link_to "recipe >>", cocktail_path(cocktail)  %>
-        </div>
+        </div> -->
       </div>
     </div>
   <% end %>
 </div>
 <br>
-<!-- <p class="btn btn-primary rounded">
- -->  <%= link_to "Add New Cocktail >>", new_cocktail_path, class: "btn btn-primary rounded" %>
+
+<%= link_to "Add New Cocktail >>", new_cocktail_path, class: "btn btn-primary rounded" %>
