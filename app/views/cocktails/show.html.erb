@@ -1,8 +1,11 @@
 <%= link_to "<< Home", cocktails_path %>
 <br>
 </br>
-<%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-<!-- <img src="https://source.unsplash.com/featured/?cocktail"> -->
+<% if @cocktail.photo.attached? %>
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+<% else %>
+  <%= <img src="https://source.unsplash.com/featured/?cocktail"> %>
+<% end %>
 <h2><%= @cocktail.name %></h2>
 <br>
 <ul>
